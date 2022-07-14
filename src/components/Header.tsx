@@ -7,8 +7,8 @@ const HeaderDiv = styled.div`
   text-align: center;
   align-items: center;
   display: flex;
-  background-color: #d6ecff;
-  color: #858585;
+  background-color: ${props=>props.theme.colors.main};
+  color: ${props=>props.theme.colors.white};
   font-weight: bold;
 `;
 export default function Header() {

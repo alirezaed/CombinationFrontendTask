@@ -1,10 +1,19 @@
 import * as React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledButton = styled.button`
-    height: 20px;
-`
-export default function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-
-    return <StyledButton {...props} />
+  height: 30px;
+  border-radius: ${(props) => props.theme.borderRadius};
+  border: 1px solid ${(props) => props.theme.colors.light};
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.main};
+  background-color: ${(props) => props.theme.colors.lighter};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.light};
+  }
+`;
+function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
+  return <StyledButton {...props} />;
 }
+
+export default React.memo(Button);

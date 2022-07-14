@@ -1,8 +1,8 @@
 export interface UserModel{
-    firstname?:string;
-    lastname?:string;
-    image?:string;
-    country?:string;
+    firstname:string;
+    lastname:string;
+    image:string;
+    country:string;
 }
 
 export interface IncommingModel{

@@ -8,8 +8,10 @@ const LayoutContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  height: calc(100vh - ${(props) => props.theme.headerHeight});
-  padding: ${(props) => props.theme.paddings[2]}px
+  padding: ${(props) => props.theme.paddings[2]}px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 `;
 export default function Layout({ children }: React.PropsWithChildren) {
   return (

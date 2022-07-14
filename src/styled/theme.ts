@@ -1,13 +1,16 @@
 import { DefaultTheme, createGlobalStyle } from "styled-components";
 
 const theme: DefaultTheme = {
-  borderRadius: "5px",
+  borderRadius: "4px",
   headerHeight: "50px",
-  paddings:[4,8,16,24],
-  margins:[8,16,32,64],
+  paddings: [4, 8, 16, 24],
+  margins: [8, 16, 32, 64],
   colors: {
-    main: "cyan",
-    secondary: "magenta",
+    main: "#576F72",
+    secondary: "#7D9D9C",
+    light: "#E4DCCF",
+    lighter: "#F0EBE3",
+    white: "white",
   },
 };
 

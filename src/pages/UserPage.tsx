@@ -1,14 +1,20 @@
 import * as React from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
+import Spinner from "../components/Spinner";
 import UserCard from "../components/UserCard";
 import { IncommingModel, UserModel } from "../types/models";
 
 const PageContainer = styled.div`
-  height: 20px;
   display: flex;
   justify-content: center;
+  flex-flow: column;
+  max-width: 300px;
   width: 100%;
+`;
+
+const StyledButton = styled(Button)`
+  margin-bottom: 8px;
 `;
 
 export default function UserPage() {
@@ -41,12 +47,14 @@ export default function UserPage() {
       setShow(false);
     }
   };
-
+  
   return (
     <PageContainer>
-      <Button disabled={!user} onClick={handleShowHideClick}>{show ? "Hide" : "Show"}</Button>
-      {!user && "Loading..."}
-      {show && <UserCard {...user} />}
+      <StyledButton disabled={!user} onClick={handleShowHideClick}>
+        {show ? "Hide" : "Show"}
+      </StyledButton>
+      {!user && <Spinner />}
+      {(user && show) && <UserCard {...user} />}
     </PageContainer>
   );
 }
