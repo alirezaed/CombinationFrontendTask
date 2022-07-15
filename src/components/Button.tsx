@@ -11,6 +11,11 @@ const StyledButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.colors.light};
   }
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+
 `;
 function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return <StyledButton {...props} />;
