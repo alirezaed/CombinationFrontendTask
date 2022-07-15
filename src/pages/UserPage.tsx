@@ -3,13 +3,12 @@ import styled from "styled-components";
 import Button from "../components/Button";
 import Spinner from "../components/Spinner";
 import UserCard from "../components/UserCard";
+import { FlexColumn } from "../styled/elements";
 import { IncommingModel, UserModel } from "../types/models";
 
-const PageContainer = styled.div`
-  display: flex;
+const PageContainer = styled(FlexColumn)`
   justify-content: center;
-  flex-flow: column;
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
 `;
 

@@ -15,8 +15,8 @@ const StyledButton = styled.button`
     background-color: gray;
     cursor: not-allowed;
   }
-
 `;
+
 function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return <StyledButton {...props} />;
 }
